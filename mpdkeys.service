@@ -1,0 +1,9 @@
+[Unit]
+Description=MPD Control from USB device buttons
+
+[Service]
+ExecStart=/usr/local/sbin/mpdkeys /dev/input/by-id/usb-FiiO_FiiO_USB_DAC-E18-event-if00
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
